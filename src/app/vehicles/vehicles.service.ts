@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
-import { Igeneric } from '../generic/igeneric';
 import { Vehicles } from './vehicles';
 import { Observable } from 'rxjs';
+import { IGenericOperations } from '../generic/igeneric-operations';
+import { IGenericResource } from '../generic/igeneric-resource';
 
 @Injectable({
   providedIn: 'root'
 })
-export class VehiclesService implements Igeneric<Vehicles, number>{
+export class VehiclesService implements IGenericOperations<Vehicles, number>{
   endpoint = environment.URL_API+"Vehicles";
   constructor(private http: HttpClient) { }
   post(data: Vehicles) {
@@ -24,9 +25,9 @@ export class VehiclesService implements Igeneric<Vehicles, number>{
       console.log("Entrou dentro do serviço VehiclesService - método Patch");
       this.http.patch(this.endpoint+"/"+id,data);
     }
-    get(): Observable<Vehicles[]> {
-      console.log("Entrou dentro do serviço VehiclesService - método Get");
-      return this.http.get<Vehicles[]>(this.endpoint)  
+    get(): Observable<IGenericResource<Vehicles>> {
+      console.log("Entrou dentro do serviço FilmeService - método Get");
+      return this.http.get<IGenericResource<Vehicles>>(this.endpoint);  
       }
     getById(id?: number): Observable<Vehicles> {
       console.log("Entrou dentro do serviço VehiclesService - método GetById");

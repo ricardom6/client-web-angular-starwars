@@ -1,1 +1,13 @@
-<p>people-list works!</p>
+<div>
+    Exemplo de carregamento da lista de persones
+    <ul>
+        <li *ngFor="let person of people">
+            {{person.title}}<br> {{person.episode_id}}
+            <br> {{person.opening_crawl}}
+            <br> {{person.director}}
+            <br> {{person.producer}}
+            <br> {{person.release_date}}
+            <br>
+        </li>
+    </ul>
+</div>

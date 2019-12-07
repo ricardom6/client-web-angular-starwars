@@ -1,1 +1,13 @@
-<p>vehicles-list works!</p>
+<div>
+    Exemplo de carregamento da lista de vehiclees
+    <ul>
+        <li *ngFor="let vehicle of vehicles">
+            {{vehicle.title}}<br> {{vehicle.episode_id}}
+            <br> {{vehicle.opening_crawl}}
+            <br> {{vehicle.director}}
+            <br> {{vehicle.producer}}
+            <br> {{vehicle.release_date}}
+            <br>
+        </li>
+    </ul>
+</div>

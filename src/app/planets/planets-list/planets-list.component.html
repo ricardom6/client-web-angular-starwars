@@ -1,1 +1,13 @@
-<p>planets-list works!</p>
+<div>
+    Exemplo de carregamento da lista de plaes
+    <ul>
+        <li *ngFor="let plan of plans">
+            {{planet.title}}<br> {{planet.episode_id}}
+            <br> {{planet.opening_crawl}}
+            <br> {{planet.director}}
+            <br> {{planet.producer}}
+            <br> {{planet.release_date}}
+            <br>
+        </li>
+    </ul>
+</div>

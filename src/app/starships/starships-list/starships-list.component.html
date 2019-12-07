@@ -1,1 +1,13 @@
-<p>starships-list works!</p>
+<div>
+    Exemplo de carregamento da lista de starshipes
+    <ul>
+        <li *ngFor="let starship of starships">
+            {{starship.title}}<br> {{starship.episode_id}}
+            <br> {{starship.opening_crawl}}
+            <br> {{starship.director}}
+            <br> {{starship.producer}}
+            <br> {{starship.release_date}}
+            <br>
+        </li>
+    </ul>
+</div>

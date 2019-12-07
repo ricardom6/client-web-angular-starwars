@@ -1,1 +1,13 @@
-<p>species-list works!</p>
+<div>
+    Exemplo de carregamento da lista de speciees
+    <ul>
+        <li *ngFor="let specie of species">
+            {{specie.title}}<br> {{specie.episode_id}}
+            <br> {{specie.opening_crawl}}
+            <br> {{specie.director}}
+            <br> {{specie.producer}}
+            <br> {{specie.release_date}}
+            <br>
+        </li>
+    </ul>
+</div>
