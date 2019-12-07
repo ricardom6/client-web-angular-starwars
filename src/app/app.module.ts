@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FilmsModule } from './films/films.module';
-import { PeopleModule } from './people/people.module'
+import { PeopleModule } from './people/people.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NgxBootstrapModule } from './modules/ngxbootstrap/ngxbootstrap.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,7 @@ import { PeopleModule } from './people/people.module'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NgbModule, FilmsModule, PeopleModule
+    AppRoutingModule, NgbModule, NgxBootstrapModule,FilmsModule, PeopleModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
