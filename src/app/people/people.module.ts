@@ -11,6 +11,7 @@ import { PeopleListComponent } from './people-list/people-list.component';
   declarations: [PeopleListComponent],
   imports: [
     CommonModule, GenericModule, HttpClientModule
-  ]
+  ],
+  exports: [PeopleListComponent]
 })
 export class PeopleModule { }

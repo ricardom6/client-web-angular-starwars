@@ -11,7 +11,7 @@ import { IGenericOperations } from '../generic/igeneric-operations';
   providedIn: 'root'
 })
 export class PeopleService implements IGenericOperations<People, number>{
-  endpoint = environment.URL_API+"films";
+  endpoint = environment.URL_API+"people";
 constructor(private http: HttpClient) { }
 post(data: People) {
   console.log("Entrou dentro do serviço PeopleService - método POST");
@@ -26,7 +26,7 @@ post(data: People) {
     this.http.patch(this.endpoint+"/"+id,data);
   }
   get(): Observable<IGenericResource<People>> {
-    console.log("Entrou dentro do serviço FilmsService - método GET");
+    console.log("Entrou dentro do serviço PeopleService - método GET");
     return this.http.get<IGenericResource<People>>(this.endpoint);
   }
   getById(id?: number): Observable<People> {

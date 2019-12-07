@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FilmsModule } from './films/films.module';
+import { PeopleModule } from './people/people.module'
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { FilmsModule } from './films/films.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NgbModule, FilmsModule
+    AppRoutingModule, NgbModule, FilmsModule, PeopleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
