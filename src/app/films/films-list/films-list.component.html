@@ -1,3 +1,37 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Episodio</th>
+            <th scope="col">Info</th>
+            <th scope="col">Diretor</th>
+            <th scope="col">Release</th>
+            <th scope="col">Detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let film of films; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ film.title }}</td>
+            <td>{{ film.episode_id}}</td>
+
+            <td>{{film.opening_crawl}}</td>
+            <td>{{ film.director}}</td>
+            <td>{{film.release_date}}</td>
+            <td><button type="button" class="btn btn-primary">Detalhes</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+/*
 <div>
     Exemplo de carregamento da lista de filmes
     <ul>
@@ -10,4 +44,4 @@
             <br>
         </li>
     </ul>
-</div>
+</div>*/
