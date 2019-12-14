@@ -1,10 +1,16 @@
-<div *ngFor="let film of films; index as i" class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{ film.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted"> Episodio: {{ film.episode_id}}</h6>
-        <p class="card-text">{{film.producer}}</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let film of films" class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{film.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Episódio: {{film.episode_id}}</h6>
+                    <p class="card-text">{{film.director}}</p>
+                    <a href="#" class="card-link">{{film.producer}}</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+                <app-films-detail></app-films-detail>
+            </div>
+        </div>
     </div>
-    <app-films-detail></app-films-detail>
 </div>

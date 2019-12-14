@@ -1,10 +1,15 @@
-<div class="card" style="width: 18rem;">
-    <div *ngFor="let person of people; index as i" class="card-body">
-        <h5 class="card-title">{{ person.name}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted"> Episodio: {{ person.birth_year}}</h6>
-        <p class="card-text">Especie: {{person.species}} ;Veiculos: {{person.vehicles}};Naves: {{person.starships}}</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let person of people" class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ person.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Nascimento: {{ person.birth_year}}</h6>
+                    <p class="card-text">Especie: {{person.species}} ;Veiculos: {{person.vehicles}};Naves: {{person.starships}}</p>
+                    <a href="#" class="card-link">card-link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div>
