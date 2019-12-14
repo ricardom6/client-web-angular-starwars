@@ -1,13 +1,10 @@
-<div>
-    Exemplo de carregamento da lista de persones
-    <ul>
-        <li *ngFor="let person of people">
-            {{person.title}}<br> {{person.episode_id}}
-            <br> {{person.opening_crawl}}
-            <br> {{person.director}}
-            <br> {{person.producer}}
-            <br> {{person.release_date}}
-            <br>
-        </li>
-    </ul>
+<div class="card" style="width: 18rem;">
+    <div *ngFor="let person of people; index as i" class="card-body">
+        <h5 class="card-title">{{ person.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"> Episodio: {{ person.birth_year}}</h6>
+        <p class="card-text">Especie: {{person.species}} ;Veiculos: {{person.vehicles}};Naves: {{person.starships}}</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
 </div>
+<div>

@@ -6,12 +6,13 @@ import { SectionComponent } from './section/section.component';
 import { ArticleComponent } from './article/article.component';
 import { FooterComponent } from './footer/footer.component';
 import {FilmsModule} from '../films/films.module'
+import { PeopleModule } from '../people/people.module';
 ​
 ​@NgModule({
   declarations: [NavComponent, AsideComponent, SectionComponent, ArticleComponent, FooterComponent],
   imports: [
     CommonModule,
-    FilmsModule
+    FilmsModule, PeopleModule
   ],
   exports: [NavComponent, AsideComponent, SectionComponent, ArticleComponent, FooterComponent]
 })

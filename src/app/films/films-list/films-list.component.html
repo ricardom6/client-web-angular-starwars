@@ -1,57 +1,10 @@
-<div class="card" style="width: 18rem;">
-    <div *ngFor="let film of films; index as i" class="card-body">
+<div *ngFor="let film of films; index as i" class="card" style="width: 18rem;">
+    <div class="card-body">
         <h5 class="card-title">{{ film.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted"> Episodio: {{ film.episode_id}}</h6>
-        <p class="card-text">{{film.opening_crawl}}</p>
+        <p class="card-text">{{film.producer}}</p>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </div>
+    <app-films-detail></app-films-detail>
 </div>
-
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Episodio</th>
-            <th scope="col">Info</th>
-            <th scope="col">Diretor</th>
-            <th scope="col">Release</th>
-            <th scope="col">Detalhes</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr *ngFor="let film of films; index as i">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ film.title }}</td>
-            <td>{{ film.episode_id}}</td>
-            <td>{{film.opening_crawl}}</td>
-            <td>{{ film.director}}</td>
-            <td>{{film.release_date}}</td>
-            <td><button type="button" class="btn btn-primary">Detalhes</button></td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-
-
-
-
-/*
-<div>
-    Exemplo de carregamento da lista de filmes
-    <ul>
-        <li *ngFor="let film of films">
-            {{film.title}}<br> {{film.episode_id}}
-            <br> {{film.opening_crawl}}
-            <br> {{film.director}}
-            <br> {{film.producer}}
-            <br> {{film.release_date}}
-            <br>
-        </li>
-    </ul>
-</div>*/
